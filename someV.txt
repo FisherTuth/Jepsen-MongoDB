@@ -1,0 +1,135 @@
+this is db in mongodb-test
+{
+:mongos
+#jepsen.mongodb.db.Mongos
+    {
+    :config-str rs_config/n1:27019,n2:27019,n3:27019,n4:27019,n5:27019,
+    :shard-strs (rs_shard1/n6:27018)
+    },
+:shards (
+    {:name config,
+     :nodes (n1 n2 n3 n4 n5),
+     :db #object[jepsen.mongodb.db$replica_set_db$reify__555 0x428e9be2 jepsen.mongodb.db$replica_set_db$reify__555@428e9be2]
+     }
+    {:name shard1,
+     :nodes (n6 n7 n8 n9 n10),
+     :db #object[jepsen.mongodb.db$replica_set_db$reify__555 0x3e729d46
+    jepsen.mongodb.db$replica_set_db$reify__555@3e729d46]
+    }
+ ),
+:tcpdump #object[jepsen.db$tcpdump$reify__3446 0x2723b0d0 jepsen.db$tcpdump$reify__3446@2723b0d0]
+}
+
+
+this is opts in package-for-shard
+{:db
+ {:mongos
+  {:config-str
+   "rs_config/n1:27019,n2:27019,n3:27019,n4:27019,n5:27019",
+   :shard-strs ("rs_shard1/n6:27018")},
+  :shards
+  ({:name "config",
+    :nodes ("n1" "n2" "n3" "n4" "n5"),
+    :db
+    #object[jepsen.mongodb.db$replica_set_db$reify__555 0x2662e3ff "jepsen.mongodb.db$replica_set_db$reify__555@2662e3ff"]}
+   {:name "shard1",
+    :nodes ("n6" "n7" "n8" "n9" "n10"),
+    :db
+    #object[jepsen.mongodb.db$replica_set_db$reify__555 0x6debf1b8 "jepsen.mongodb.db$replica_set_db$reify__555@6debf1b8"]}),
+  :tcpdump
+  #object[jepsen.db$tcpdump$reify__3446 0x41d8ac75 "jepsen.db$tcpdump$reify__3446@41d8ac75"]},
+ :nodes ["n1" "n2" "n3" "n4" "n5" "n6" "n7" "n8" "n9" "n10"],
+ :faults #{:partition},
+ :partition {:targets [:primaries]},
+ :pause {:targets [nil :one :primaries :majority :all]},
+ :kill {:targets [nil :one :primaries :majority :all]},
+ :interval 1
+ }
+
+this is shard in package-for-shard
+{:name "config",
+ :nodes ("n1" "n2" "n3" "n4" "n5"),
+ :db
+ #object[jepsen.mongodb.db$replica_set_db$reify__555 0x2662e3ff "jepsen.mongodb.db$replica_set_db$reify__555@2662e3ff"]
+ }
+
+this is opts in jepsen-partition-package
+{:db
+ #object[jepsen.mongodb.db$replica_set_db$reify__555 0x2662e3ff "jepsen.mongodb.db$replica_set_db$reify__555@2662e3ff"],
+ :nodes ["n1" "n2" "n3" "n4" "n5" "n6" "n7" "n8" "n9" "n10"],
+ :faults #{:partition},
+ :partition {:targets [:primaries]},
+ :pause {:targets [nil :one :primaries :majority :all]},
+ :kill {:targets [nil :one :primaries :majority :all]},
+ :interval 1
+ }
+
+ this is opts in jepsen-clock-package
+ {:db
+  #object[jepsen.mongodb.db$replica_set_db$reify__555 0x2662e3ff "jepsen.mongodb.db$replica_set_db$reify__555@2662e3ff"],
+  :nodes ["n1" "n2" "n3" "n4" "n5" "n6" "n7" "n8" "n9" "n10"],
+  :faults #{:partition},
+  :partition {:targets [:primaries]},
+  :pause {:targets [nil :one :primaries :majority :all]},
+  :kill {:targets [nil :one :primaries :majority :all]},
+  :interval 1
+  }
+
+  this is opts in jepsen-db-package
+  {:db
+   #object[jepsen.mongodb.db$replica_set_db$reify__555 0x2662e3ff "jepsen.mongodb.db$replica_set_db$reify__555@2662e3ff"],
+   :nodes ["n1" "n2" "n3" "n4" "n5" "n6" "n7" "n8" "n9" "n10"],
+   :faults #{:partition},
+   :partition {:targets [:primaries]},
+   :pause {:targets [nil :one :primaries :majority :all]},
+   :kill {:targets [nil :one :primaries :majority :all]},
+   :interval 1
+   }
+
+   this is opts in jepsen-db-generators
+   {:db
+    #object[jepsen.mongodb.db$replica_set_db$reify__555 0x2662e3ff "jepsen.mongodb.db$replica_set_db$reify__555@2662e3ff"],
+    :nodes ["n1" "n2" "n3" "n4" "n5" "n6" "n7" "n8" "n9" "n10"],
+    :faults #{:partition},
+    :partition {:targets [:primaries]},
+    :pause {:targets [nil :one :primaries :majority :all]},
+    :kill {:targets [nil :one :primaries :majority :all]},
+    :interval 1
+    }
+
+    this is targets in jepsen-partition-package-let
+    [:primaries]
+
+    this is (jepsen-partition-specs db) in jepsen-partition-package-let
+    [:one :minority-third :majority :majorities-ring :primaries]
+
+this is opts in nemesis-package
+{:db
+     {:mongos
+      {:config-str
+       "rs_config/n1:27019,n2:27019,n3:27019,n4:27019,n5:27019",
+       :shard-strs ("rs_shard1/n6:27018")
+       },
+      :shards
+      (
+       {:name "config",
+        :nodes ("n1" "n2" "n3" "n4" "n5"),
+        :db
+        #object[jepsen.mongodb.db$replica_set_db$reify__555 0x261b27db "jepsen.mongodb.db$replica_set_db$reify__555@261b27db"]
+        }
+       {:name "shard1",
+        :nodes ("n6" "n7" "n8" "n9" "n10"),
+        :db
+        #object[jepsen.mongodb.db$replica_set_db$reify__555 0x5de14222 "jepsen.mongodb.db$replica_set_db$reify__555@5de14222"]
+        }
+       ),
+      :tcpdump
+      #object[jepsen.db$tcpdump$reify__3446 0x3c2e73ce "jepsen.db$tcpdump$reify__3446@3c2e73ce"]
+      },
+     :nodes ["n1" "n2" "n3" "n4" "n5" "n6" "n7" "n8" "n9" "n10"],
+     :faults (:partition),
+     :partition {:targets [:primaries]},
+     :pause {:targets [nil :one :primaries :majority :all]},
+     :kill {:targets [nil :one :primaries :majority :all]},
+     :interval 1
+}

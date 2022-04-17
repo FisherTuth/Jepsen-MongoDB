@@ -1,0 +1,103 @@
+this is {:replSetGetConfig 1} in mongodb
+
+{
+  :config
+    {
+      :_id rs_shard1,
+      :version 1,
+      :protocolVersion 1,
+      :writeConcernMajorityJournalDefault true,
+      :members (
+        {
+          :tags {},
+          :_id 0,
+          :votes 1,
+          :slaveDelay 0,
+          :arbiterOnly false,
+          :buildIndexes true,
+          :host n6:27018,
+          :priority 5.0,
+          :hidden false
+        }
+        {
+          :tags {},
+          :_id 1,
+          :votes 1,
+          :slaveDelay 0,
+          :arbiterOnly false,
+          :buildIndexes true,
+          :host n7:27018,
+          :priority 4.0,
+          :hidden false
+        }
+        {
+          :tags {},
+          :_id 2,
+          :votes 1,
+          :slaveDelay 0,
+          :arbiterOnly false,
+          :buildIndexes true,
+          :host n8:27018, :priority 3.0,
+          :hidden false
+        }
+        {
+          :tags {},
+          :_id 3,
+          :votes 1,
+          :slaveDelay 0,
+          :arbiterOnly false,
+          :buildIndexes true,
+          :host n9:27018,
+          :priority 2.0,
+          :hidden false
+        }
+        {
+          :tags {},
+          :_id 4,
+          :votes 1,
+          :slaveDelay 0,
+          :arbiterOnly false,
+          :buildIndexes true,
+          :host n10:27018,
+          :priority 1.0,
+          :hidden false
+        }),
+      :settings
+        {
+          :electionTimeoutMillis 1000,
+          :chainingAllowed true,
+          :getLastErrorModes {},
+          :heartbeatTimeoutSecs 1,
+          :getLastErrorDefaults
+            {
+              :w 1,
+              :wtimeout 0
+            },
+          :replicaSetId #object[org.bson.types.ObjectId 0x42be5d6f 61b5cf0b2435131cdd26319c],
+          :heartbeatIntervalMillis 2000,
+          :catchUpTakeoverDelayMillis 3000,
+          :catchUpTimeoutMillis 1000
+          }
+    },
+  :ok 1.0,
+  :$gleStats {:lastOpTime #object[org.bson.BsonTimestamp 0x1f54ad68 Timestamp{value=0, seconds=0, inc=0}], :electionId #object[org.bson.types.ObjectId 0x32adfaa8 7fffffff0000000000000001]},
+  :lastCommittedOpTime #object[org.bson.BsonTimestamp 0x8ed880e Timestamp{value=7040761303039737867, seconds=1639304986, inc=11}],
+  :$configServerState
+    {
+      :opTime
+        {
+          :ts #object[org.bson.BsonTimestamp 0x3888f959 Timestamp{value=7040761303039737865, seconds=1639304986, inc=9}],
+          :t 1
+        }
+    },
+  :$clusterTime
+    {
+      :clusterTime #object[org.bson.BsonTimestamp 0x28d2ccd Timestamp{value=7040761303039737867, seconds=1639304986, inc=11}],
+      :signature
+        {
+          :hash #object[org.bson.types.Binary 0x5f28ee8e org.bson.types.Binary@c98f581],
+          :keyId 0
+        }
+    },
+  :operationTime #object[org.bson.BsonTimestamp 0x3be1a09d Timestamp{value=7040761303039737867, seconds=1639304986, inc=11}]
+}

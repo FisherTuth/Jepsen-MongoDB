@@ -1,0 +1,125 @@
+this is members in replSetGetStatus
+
+(
+ {:_id 0,
+  :stateStr PRIMARY,
+  :infoMessage could not find member to sync from,
+  :name n6:27018,
+  :uptime 23,
+  :syncSourceHost ,
+  :optimeDate #inst "2021-12-11T14:34:20.000-00:00",
+  :lastHeartbeatMessage ,
+  :state 1, :syncSourceId -1, :syncingTo ,
+  :electionTime #object[org.bson.BsonTimestamp 0x12f4887f Timestamp{value=7040453177790955521, seconds=1639233245, inc=1}],
+  :configVersion 1,
+  :health 1.0,
+  :optime {
+    :ts #object[org.bson.BsonTimestamp 0x4c7016c2 Timestamp{value=7040453242215464961, seconds=1639233260, inc=1}],
+    :t 1
+    },
+  :electionDate #inst "2021-12-11T14:34:05.000-00:00", :self true
+  }
+  {:_id 1,
+   :stateStr SECONDARY,
+   :pingMs 0,
+   :optimeDurable{
+     :ts #object[org.bson.BsonTimestamp 0x722dcc3f Timestamp{value=7040453220740628481, seconds=1639233255, inc=1}],
+     :t 1
+   },
+   :infoMessage ,
+   :name n7:27018,
+   :lastHeartbeatRecv #inst "2021-12-11T14:34:19.860-00:00",
+   :uptime 16,
+   :syncSourceHost n6:27018,
+   :optimeDate #inst "2021-12-11T14:34:15.000-00:00",
+   :lastHeartbeatMessage ,
+   :state 2,
+   :syncSourceId 0,
+   :lastHeartbeat #inst "2021-12-11T14:34:19.063-00:00",
+   :syncingTo n6:27018,
+   :configVersion 1,
+   :health 1.0,
+   :optimeDurableDate #inst "2021-12-11T14:34:15.000-00:00",
+   :optime {
+     :ts #object[org.bson.BsonTimestamp 0x71fd323f Timestamp{value=7040453220740628481, seconds=1639233255, inc=1}],
+     :t 1
+   }
+  }
+  {:_id 2,
+   :stateStr SECONDARY,
+   :pingMs 0,
+   :optimeDurable {
+     :ts #object[org.bson.BsonTimestamp 0x477ceb0f Timestamp{value=7040453220740628481, seconds=1639233255, inc=1}],
+     :t 1
+   },
+   :infoMessage ,
+   :name n8:27018,
+   :lastHeartbeatRecv #inst "2021-12-11T14:34:19.839-00:00",
+   :uptime 16,
+   :syncSourceHost n6:27018,
+   :optimeDate #inst "2021-12-11T14:34:15.000-00:00",
+   :lastHeartbeatMessage ,
+   :state 2,
+   :syncSourceId 0,
+   :lastHeartbeat #inst "2021-12-11T14:34:19.072-00:00",
+   :syncingTo n6:27018,
+   :configVersion 1,
+   :health 1.0,
+   :optimeDurableDate #inst "2021-12-11T14:34:15.000-00:00",
+   :optime {
+     :ts #object[org.bson.BsonTimestamp 0xbf63324 Timestamp{value=7040453220740628481, seconds=1639233255, inc=1}],
+     :t 1
+   }
+ }
+ {:_id 3,
+  :stateStr SECONDARY,
+  :pingMs 0,
+  :optimeDurable {
+    :ts #object[org.bson.BsonTimestamp 0x17a65a51 Timestamp{value=7040453220740628481, seconds=1639233255, inc=1}],
+    :t 1
+  },
+  :infoMessage ,
+  :name n9:27018,
+  :lastHeartbeatRecv #inst "2021-12-11T14:34:19.859-00:00",
+  :uptime 16,
+  :syncSourceHost n6:27018,
+  :optimeDate #inst "2021-12-11T14:34:15.000-00:00",
+  :lastHeartbeatMessage ,
+  :state 2,
+  :syncSourceId 0,
+  :lastHeartbeat #inst "2021-12-11T14:34:19.063-00:00",
+  :syncingTo n6:27018,
+  :configVersion 1,
+  :health 1.0,
+  :optimeDurableDate #inst "2021-12-11T14:34:15.000-00:00",
+  :optime {
+    :ts #object[org.bson.BsonTimestamp 0xfd2ee50 Timestamp{value=7040453220740628481, seconds=1639233255, inc=1}],
+    :t 1
+  }
+}
+{:_id 4,
+  :stateStr SECONDARY,
+  :pingMs 0,
+  :optimeDurable {
+    :ts #object[org.bson.BsonTimestamp 0x2fd64836 Timestamp{value=7040453220740628481, seconds=1639233255, inc=1}],
+    :t 1
+  },
+  :infoMessage ,
+  :name n10:27018,
+  :lastHeartbeatRecv #inst "2021-12-11T14:34:19.873-00:00",
+  :uptime 16,
+  :syncSourceHost n6:27018,
+  :optimeDate #inst "2021-12-11T14:34:15.000-00:00",
+  :lastHeartbeatMessage ,
+  :state 2,
+  :syncSourceId 0,
+  :lastHeartbeat #inst "2021-12-11T14:34:19.072-00:00",
+  :syncingTo n6:27018,
+  :configVersion 1,
+  :health 1.0,
+  :optimeDurableDate #inst "2021-12-11T14:34:15.000-00:00",
+  :optime {
+    :ts #object[org.bson.BsonTimestamp 0x158321fb Timestamp{value=7040453220740628481, seconds=1639233255, inc=1}],
+    :t 1
+  }
+})

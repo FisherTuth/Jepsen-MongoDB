@@ -1,0 +1,41 @@
+先是关于mongod的设置
+install!!
+mkdir -p /tmp/jepsen
+apt-cache policy mongodb-org-mongos
+apt-cache policy mongodb-org-server
+{
+    cd /tmp/jepsen
+    <url> = https://repo.mongodb.org/apt/debian/dists/buster/mongodb-org/4.2/main/binary-amd64/mongodb-org-" subpackage "_" version "_amd64.deb
+    rm -f <filename>
+    stat <filename>
+    wget --user <user> --password <password> <url>
+    return filename
+}
+dpkg -i --force-confnew <filename>
+systemctl daemon-reload
+
+configure!!
+echo > "/etc/mongod.conf" <mongod.conf>
+
+start!!
+systemctl start mongod
+==================================================================================================
+接下来是关于mongos的了
+install!!
+内容同上
+
+configure-mongos!!
+echo > "/etc/mongos.conf" <mongos.conf>
+
+start-mongos!!
+{
+    mkdir -p /tmp/mongos
+    //太复杂了
+}
+
+add-shards!
+connection 127.0.0.1:27017
+{
+  addShard : rs_n6:27018
+}
+

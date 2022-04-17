@@ -1,0 +1,91 @@
+this isMaster in n6 primary
+
+{:$gleStats
+  {:lastOpTime #object[org.bson.BsonTimestamp 0x5e2c67f3 Timestamp{value=0, seconds=0, inc=0}],
+   :electionId #object[org.bson.types.ObjectId 0x28cdf8d5 7fffffff0000000000000001]
+  },
+ :connectionId 60,
+ :primary n6:27018,
+ :hosts (n6:27018 n7:27018 n8:27018 n9:27018 n10:27018),
+ :lastWrite {:opTime
+              {:ts #object[org.bson.BsonTimestamp 0x3eb90c48 Timestamp{value=7041040621942865928, seconds=1639370020, inc=8}],
+               :t 1
+              },
+             :lastWriteDate #inst "2021-12-13T04:33:40.000-00:00",
+             :majorityOpTime {:ts #object[org.bson.BsonTimestamp 0xfed421b Timestamp{value=7041040621942865926, seconds=1639370020, inc=6}],
+                              :t 1
+                             },
+             :majorityWriteDate #inst "2021-12-13T04:33:40.000-00:00"
+            },
+ :localTime #inst "2021-12-13T04:33:40.481-00:00",
+ :maxWriteBatchSize 100000,
+ :ismaster true,
+ :secondary false,
+ :operationTime #object[org.bson.BsonTimestamp 0x32c3afea Timestamp{value=7041040621942865928, seconds=1639370020, inc=8}],
+ :lastCommittedOpTime #object[org.bson.BsonTimestamp 0x758ff237 Timestamp{value=7041040621942865926, seconds=1639370020, inc=6}],
+ :maxMessageSizeBytes 48000000,
+ :maxBsonObjectSize 16777216,
+ :readOnly false,
+ :$configServerState {:opTime
+                        {:ts #object[org.bson.BsonTimestamp 0x3a26b82 Timestamp{value=7041040621942865925, seconds=1639370020, inc=5}],
+                         :t 1
+                        }
+                     },
+ :ok 1.0,
+ :setName rs_shard1,
+ :maxWireVersion 8,
+ :logicalSessionTimeoutMinutes 30,
+ :$clusterTime {:clusterTime #object[org.bson.BsonTimestamp 0x663a1c77 Timestamp{value=7041040621942865928, seconds=1639370020, inc=8}],
+                :signature {:hash #object[org.bson.types.Binary 0x49a943a5 org.bson.types.Binary@c98f581],
+                            :keyId 0
+                           }
+               },
+ :me n6:27018,
+ :minWireVersion 0,
+ :electionId #object[org.bson.types.ObjectId 0x43bd0eed 7fffffff0000000000000001],
+ :setVersion 1
+}
+
+this isMaster in n7 secondary
+{:$gleStats
+  {:lastOpTime #object[org.bson.BsonTimestamp 0x6efef9c Timestamp{value=0, seconds=0, inc=0}],
+   :electionId #object[org.bson.types.ObjectId 0x231e1b7d 000000000000000000000000]
+  },
+ :connectionId 34,
+ :primary n6:27018,
+ :hosts (n6:27018 n7:27018 n8:27018 n9:27018 n10:27018),
+ :lastWrite {:opTime {:ts #object[org.bson.BsonTimestamp 0x7ff73bdb Timestamp{value=7041081205088845825, seconds=1639379469, inc=1}],
+                      :t 1
+                     },
+             :lastWriteDate #inst "2021-12-13T07:11:09.000-00:00",
+             :majorityOpTime {:ts #object[org.bson.BsonTimestamp 0x78e4178b Timestamp{value=7041081205088845825, seconds=1639379469, inc=1}],
+                              :t 1
+                             },
+             :majorityWriteDate #inst "2021-12-13T07:11:09.000-00:00"
+            },
+ :localTime #inst "2021-12-13T07:11:10.101-00:00",
+ :maxWriteBatchSize 100000,
+ :ismaster false,
+ :secondary true,
+ :operationTime #object[org.bson.BsonTimestamp 0x10e9404 Timestamp{value=7041081205088845825, seconds=1639379469, inc=1}],
+ :lastCommittedOpTime #object[org.bson.BsonTimestamp 0x5298b2ab Timestamp{value=7041081205088845825, seconds=1639379469, inc=1}],
+ :maxMessageSizeBytes 48000000,
+ :maxBsonObjectSize 16777216,
+ :readOnly false,
+ :$configServerState {:opTime {:ts #object[org.bson.BsonTimestamp 0x14f762c0 Timestamp{value=7041081205088845825, seconds=1639379469, inc=1}],
+                               :t 1
+                              }
+                     },
+ :ok 1.0,
+ :setName rs_shard1,
+ :maxWireVersion 8,
+ :logicalSessionTimeoutMinutes 30,
+ :$clusterTime {:clusterTime #object[org.bson.BsonTimestamp 0x4c77679a Timestamp{value=7041081205088845825, seconds=1639379469, inc=1}],
+                :signature {:hash #object[org.bson.types.Binary 0x392c74a4 org.bson.types.Binary@c98f581],
+                            :keyId 0
+                           }
+               },
+ :me n7:27018,
+ :minWireVersion 0,
+ :setVersion 1
+}

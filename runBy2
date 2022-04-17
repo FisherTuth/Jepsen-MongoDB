@@ -1,0 +1,17 @@
+实验2用的基本指令
+lein run test-all \
+-w wr \
+--nodes-file ~/nodes2 \
+-r 5000  \
+-d sharded-cluster \
+--version 4.4.5 \
+--time-limit 120 \
+--max-writes-per-key 128 \
+--read-concern majority \
+--write-concern majority \
+--txn-read-concern snapshot \
+--txn-write-concern majority \
+--nemesis-interval 1 \
+--nemesis member \
+--test-count 1 \
+--m-type 0
